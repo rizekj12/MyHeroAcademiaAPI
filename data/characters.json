@@ -1,0 +1,33 @@
+[
+    {
+        "id":"1",
+        "name": "Izuku Midoriya",
+        "alias":"Deku",
+        "quark": "One for All"
+    },
+    {
+        "id":"2",
+        "name": "Toshinori Yagi",
+        "alias": "All Might",
+        "quark":"One for All"
+    },
+    {
+        "id":"3",
+        "name": "Katsuki Bakugo",
+        "alias":"Kacchan",
+        "quark":"Explosion"
+    },
+    {
+        "id":"4",
+        "name": "Shoto Todoroki",
+        "alias":"Shoto",
+        "quark":"Fire and Ice"
+    },
+    {
+        "id":"5",
+        "name": "Eijiro Kirishima",
+        "alias":"Red Riot",
+        "quark":"Harden"
+    }
+
+]

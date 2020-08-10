@@ -1,17 +1,17 @@
 import express from "express"
-import students from "./data/students.json"
+import characters from "./data/characters.json"
 import _ from "lodash"
-import studentRoutes from "./routes/studentRoutes"
+import characterRoutes from "./routes/characterRoutes"
 
 const PORT = 3000
 
 const server = express();
 
 const buildURL = (version , path) => `/api/${version}/${path}`;
-const STUDENT_BASE_URL = buildURL('v1', 'students')
+const CHARACTER_BASE_URL = buildURL('v1', 'characters')
 
 
-server.use(STUDENT_BASE_URL, studentRoutes)
+server.use(STUDENT_BASE_URL, characterRoutes)
 
 
 

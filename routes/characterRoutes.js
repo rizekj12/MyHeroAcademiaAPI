@@ -1,17 +1,17 @@
 import express from "express"
-import students from "../data/students.json"
+import characters from "../data/characters.json"
 import _ from "lodash"
 
 const router = express.Router()
 
 router.get('/', (req, res) => {
-    res.json(students)
+    res.json(characters)
 })
 
 router.get(`/:id`, (req , res) => {
-const student = _.find(students, student => student.id === req.params.id);
-if (student) {
-    res.json(student)
+const student = _.find(characters, character => character.id === req.params.id);
+if (character) {
+    res.json(character)
 } else {
     res.send(`User ${req.params.id} does not exist`)
 }
