@@ -4,35 +4,45 @@
         "name": "Izuku Midoriya",
         "image": "https://cdn.myanimelist.net/images/characters/7/299404.jpg",
         "alias":"Deku",
-        "quirk": "One for All"
+        "quirk": "One for All",
+        "status": "alive",
+        "occupation": "student"
     },
     {
         "id":"2",
         "name": "Toshinori Yagi",
         "image": "https://imgix.ranker.com/user_node_img/50081/1001610579/original/started-down-this-path-photo-u1?w=375&q=60&fm=pjpg&dpr=2",
         "alias": "All Might",
-        "quirk":"One for All"
+        "quirk":"One for All",
+        "status": "alive",
+        "occupation": "hero"
     },
     {
         "id":"3",
         "name": "Katsuki Bakugo",
         "image": "https://www.anime-planet.com/images/characters/katsuki-bakugo-64814.jpg",
         "alias":"Kacchan",
-        "quirk":"Explosion"
+        "quirk":"Explosion",
+        "status": "alive",
+        "occupation": "student"
     },
     {
         "id":"4",
         "name": "Shoto Todoroki",
         "image": "https://qph.fs.quoracdn.net/main-qimg-5c7a9e42ce3bf03d6f6231ab541e4809",
         "alias":"Shoto",
-        "quirk":"Fire and Ice"
+        "quirk":"Fire and Ice",
+        "status": "alive",
+        "occupation": "student"
     },
     {
         "id":"5",
         "name": "Eijiro Kirishima",
         "image": "https://i.pinimg.com/originals/07/fc/6f/07fc6fcb65c93b86876bb5fdeaf271d3.gif",
         "alias":"Red Riot",
-        "quirk":"Harden"
+        "quirk":"Harden",
+        "status": "alive",
+        "occupation": "student"
     }
 
 ]

@@ -17,6 +17,17 @@ if (character) {
 }
 })
 
+//  trying to make a route that returns lists of characters based on occupation
+
+// router.get(`/characters/:occupation`, (req , res) => {
+//     const character = _.find(characters, character => character.occupation === req.params.occupation);
+//     if (character) {
+//         res.json(character)
+//     } else {
+//         res.send(`User ${req.params.occupation} does not exist`)
+//     }
+//     })
+
 router.post('/', (req,res) => {
 console.log('handling post request...')
 res.end()
