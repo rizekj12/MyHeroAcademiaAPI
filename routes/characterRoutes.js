@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
 })
 
 router.get(`/:id`, (req , res) => {
-const student = _.find(characters, character => character.id === req.params.id);
+const character = _.find(characters, character => character.id === req.params.id);
 if (character) {
     res.json(character)
 } else {

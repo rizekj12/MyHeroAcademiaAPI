@@ -11,7 +11,7 @@ const buildURL = (version , path) => `/api/${version}/${path}`;
 const CHARACTER_BASE_URL = buildURL('v1', 'characters')
 
 
-server.use(STUDENT_BASE_URL, characterRoutes)
+server.use(CHARACTER_BASE_URL, characterRoutes)
 
 
 
