@@ -9,8 +9,18 @@ const PORT = 3000
 
 const server = express();
 
+const path = require('path');
+
 server.use(morgan('tiny'))
 server.use(bodyParser.json())
+server.set('views', path.join('views'))
+server.set('view engine', 'ejs')
+
+server.get('/', (req, res) => {
+    res.render('index', {
+        characters
+    })
+})
 
 const buildURL = (version , path) => `/api/${version}/${path}`;
 const CHARACTER_BASE_URL = buildURL('v1', 'characters')

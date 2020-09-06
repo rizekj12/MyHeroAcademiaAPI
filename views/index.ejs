@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning EJS</title>
+</head>
+<body>
+    <h1>My Hero Academia API</h1>
+    <div class='container'>
+        <hr/>
+    <% characters.forEach(function(character) { %>
+        <h3> <u>ID</u>: <%= character.id %>, <u>Name</u>: <%= character.name %>, <u>Alias</u>: <%= character.alias %> <u>Quirk</u>: <%= character.quirk %></h3>
+    <% }) %>
+    </div>
+</body>
+</html>

@@ -1,10 +1,39 @@
 import express from "express"
 import characters from "../data/characters.json"
 import _ from "lodash"
+import mongoose from 'mongoose'
+
+const DB_USER = 'Rizekj1'
+
+const USER_PASSWORD = 'PlusUltra'
+
+const DB_URL = `mongodb+srv://${DB_USER}:${USER_PASSWORD}@cluster0.zcydx.mongodb.net/<dbname>?retryWrites=true&w=majority`
 
 const router = express.Router()
 
 let charactersArr = characters
+
+mongoose.connect(DB_URL)
+
+const db = mongoose.connection
+
+db.once('open', () => {
+    console.log('hooray we are connected to Atlas')
+})
+
+const CharacterSchema = mongoose.Schema({
+    _id: mongoose.Schema.Types.ObjectId,
+    name: String,
+    image: String,
+    alias: String,
+    quirk: String,
+    status: String,
+    occupation: String
+})
+
+const CharacterModel = mongoose.model('Character', CharacterSchema)
+
+
 
 router.get('/', (req, res) => {
     res.json(charactersArr)
