@@ -7,13 +7,13 @@ const DB_USER = 'Rizekj1'
 
 const USER_PASSWORD = 'PlusUltra'
 
-const DB_URL = `mongodb+srv://${DB_USER}:${USER_PASSWORD}@cluster0.zcydx.mongodb.net/<dbname>?retryWrites=true&w=majority`
+const DB_URL = `mongodb+srv://${DB_USER}:${USER_PASSWORD}@cluster0.zcydx.mongodb.net/MyHero?retryWrites=true&w=majority`
 
 const router = express.Router()
 
 let charactersArr = characters
 
-mongoose.connect(DB_URL)
+mongoose.connect(DB_URL, { useUnifiedTopology: true })
 
 const db = mongoose.connection
 
@@ -50,21 +50,23 @@ router.get(`/:id`, (req, res) => {
 
 //  trying to make a route that returns lists of characters based on occupation
 
-// router.get(`/characters/:occupation`, (req , res) => {
-//     const character = _.find(characters, character => character.occupation === req.params.occupation);
-//     if (character) {
-//         res.json(character)
-//     } else {
-//         res.send(`User ${req.params.occupation} does not exist`)
-//     }
-//     })
 
 router.post('/', (req, res) => {
-    console.log('handling post request...')
-    console.log(req.body)
-    //could do validations
-    charactersArr.push(req.body)
-    res.status(200).send("Alright!")
+    // console.log('handling post request...')
+    // console.log(req.body)
+    // //could do validations
+    // charactersArr.push(req.body)
+    // res.status(200).send("Alright!")
+    const id = new mongoose.Types.ObjectId()
+    const characterToPersist = Object.assign({
+      _id: id  
+    }, req.body)
+    const character = new CharacterModel(characterToPersist)
+
+    character.save().then((err, character) => {
+        if(err) res.status(500).send(err)
+        res.json(character)
+    })
 })
 
 router.put('/', (req, res) => {
