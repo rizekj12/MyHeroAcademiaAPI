@@ -36,7 +36,6 @@ const CharacterModel = mongoose.model('Character', CharacterSchema)
 
 
 router.get('/', (req, res) => {
-    // res.json(charactersArr)
     CharacterModel.find((err, characters) => {
         if (err) res.status(500).send(err)
         res.json(characters)
@@ -53,24 +52,12 @@ router.get(`/:id`, (req, res) => {
             }
     })
 
-
-    // const character = _.find(charactersArr, character => character.id === req.params.id);
-    // if (character) {
-    //     res.json(character)
-    // } else {
-    //     res.send(`User ${req.params.id} does not exist`)
-    // }
 })
 
 //  trying to make a route that returns lists of characters based on occupation
 
 
 router.post('/', (req, res) => {
-    // console.log('handling post request...')
-    // console.log(req.body)
-    // //could do validations
-    // charactersArr.push(req.body)
-    // res.status(200).send("Alright!")
     const id = new mongoose.Types.ObjectId()
     const characterToPersist = Object.assign({
       _id: id  
@@ -120,11 +107,5 @@ router.get('/route-handlers', (req, res, next) => {
     console.log('third handler!!')
 })
 
-// router.param('id',(req, res, next, id) => {
-//     if(isNaN(id)){
-//         next(`${id} is not a valid number`);
-//     }
-
-// })
 
 module.exports = router;

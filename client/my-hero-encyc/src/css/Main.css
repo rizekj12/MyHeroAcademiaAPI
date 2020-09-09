@@ -1,0 +1,9 @@
+.characterDiv{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.carousel-img{
+    height: 250px;
+}
