@@ -1,9 +1,11 @@
 .characterDiv{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
 
 }
 
-.carousel-img{
+/* .carousel-img{
     height: 250px;
-}
+} */

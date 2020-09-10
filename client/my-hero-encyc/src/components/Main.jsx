@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header'
 import { getCharacters } from '../services/charCrud';
 import CharacterCard from './CharacterCard'
-import Carousel from "react-elastic-carousel"
+// import Carousel from "react-elastic-carousel"
 
 import '../css/Main.css'
 
@@ -23,17 +23,17 @@ class Main extends Component {
         return ( 
             <div>
               <Header /> 
-              {/* <div className="characterDiv">
-                  {this.state.characters.map(character => <CharacterCard name={character.name} charImg ={character.image}/>)}
-              </div> */}
-              {/* <CharacterCard characters={this.state.characters}/> */}
+              <div className="characterDiv">
+                  {this.state.characters.map(character => <CharacterCard name={character.name} alias={character.alias} charImg ={character.image}/>)}
+              </div>
+              {/* <CharacterCard characters={this.state.characters}/>
                
-              <Carousel>
+              {/* <Carousel>
                     {this.state.characters.map(character => <div>
                     <h1>{character.alias}</h1>
                     <img className="carousel-img" src={character.image} alt="characterImg"/>
                     </div>)}
-                </Carousel>
+                </Carousel> */}
 
 
 

@@ -8,7 +8,7 @@ import Main from "./components/Main"
 export default function App (){
 
 return (
-  <div>
+  <div className="pageDiv">
     <Main />
   </div>
 )

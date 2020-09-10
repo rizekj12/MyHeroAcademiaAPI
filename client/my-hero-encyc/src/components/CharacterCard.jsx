@@ -11,7 +11,7 @@ class CharacterCard extends Component {
     render() { 
         return (
             <div className="charCardDiv">
-                <h3>{this.props.name}</h3>
+                <h3>{this.props.alias}</h3>
                 <img className="characterImg" src={this.props.charImg} alt="character image"/>
             </div>
           );
