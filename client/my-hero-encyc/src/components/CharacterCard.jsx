@@ -1,21 +1,27 @@
 import React, { Component } from 'react';
 import '../css/CharacterCard.css'
+import { Link } from 'react-router-dom'
 
 class CharacterCard extends Component {
-   constructor(props){
-       super(props)
-       this.state = {
+    constructor(props) {
+        super(props)
+        this.state = {
 
-       }
-   }
-    render() { 
+        }
+    }
+    render() {
         return (
-            <div className="charCardDiv">
-                <h3>{this.props.alias}</h3>
-                <img className="characterImg" src={this.props.charImg} alt="character image"/>
-            </div>
-          );
+            <>
+                    <div className="charCardDiv">
+                        <h3>{this.props.alias}</h3>
+                        <Link to={`/Character/${this.props.id}`}>
+                        <img className="characterImg" src={this.props.charImg} alt="character image" />
+                        </Link>
+                    </div>
+                
+            </>
+        );
     }
 }
- 
+
 export default CharacterCard;

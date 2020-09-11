@@ -5,7 +5,7 @@ class Header extends Component {
     render() { 
         return (  
             <div>
-                <img src="https://www.dafont.com/forum/attach/orig/5/6/564609.png?1" alt="my hero academia logo"/>
+                <img src="https://i.cdn.turner.com/adultswim/big/img/2018/05/10/MHA_1appHeader.png" alt="my hero academia logo"/>
                 <h2>Welcome to the My Hero Academia Encyclepedia!</h2>
             </div>
         );
