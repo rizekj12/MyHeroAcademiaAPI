@@ -28,7 +28,10 @@ const CharacterSchema = mongoose.Schema({
     alias: String,
     quirk: String,
     status: String,
-    occupation: String
+    occupation: String,
+    age: String,
+    height: String,
+    birthday: String
 })
 
 const CharacterModel = mongoose.model('Character', CharacterSchema)
