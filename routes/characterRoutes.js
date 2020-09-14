@@ -29,7 +29,7 @@ const CharacterSchema = mongoose.Schema({
     quirk: String,
     status: String,
     occupation: String,
-    age: String,
+    age: Number,
     height: String,
     birthday: String
 })
@@ -96,7 +96,7 @@ router.put('/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
     CharacterModel.findByIdAndRemove(req.params.id, (err, character) => {
         if (err) res.status(500).send(err)
-        res.status(200).send(`Character with id ${req.params.id} was deleted`)
+        res.status(200).send(`Character named ${req.params.name} with id ${req.params.id} was deleted`)
     })
 })
 

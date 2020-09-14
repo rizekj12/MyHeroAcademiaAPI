@@ -1,6 +1,7 @@
 .characterDiv{
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
+    justify-content: space-evenly;
     flex-wrap: wrap;
     margin: auto;
 
