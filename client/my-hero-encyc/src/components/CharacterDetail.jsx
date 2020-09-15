@@ -21,6 +21,9 @@ class CharacterDetail extends Component {
                     <p>Quirk: {selectedChar.quirk}</p>
                     <p>Occupation: {selectedChar.occupation}</p>
                     <p>Status: {selectedChar.status}</p>
+                    <p>Age: {selectedChar.age}</p>
+                    <p>Height: {selectedChar.height}</p>
+                    <p>Birthday: {selectedChar.birthday}</p>
 
                 </div>}
             </div>

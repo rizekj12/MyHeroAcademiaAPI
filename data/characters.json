@@ -2,7 +2,7 @@
     {
         "id":"1",
         "name": "Izuku Midoriya",
-        "image": "https://cdn.myanimelist.net/images/characters/7/299404.jpg",
+        "image": "https://imgix.ranker.com/user_node_img/50088/1001743173/original/a-letter-to-a-hero-photo-u3?w=650&q=50&fm=pjpg&fit=crop&crop=faces",
         "alias":"Deku",
         "quirk": "One for All",
         "status": "alive",
@@ -20,7 +20,7 @@
     {
         "id":"3",
         "name": "Katsuki Bakugo",
-        "image": "https://www.anime-planet.com/images/characters/katsuki-bakugo-64814.jpg",
+        "image": "https://i.quotev.com/img/q/u/18/6/2/ucqdi5cvar.jpg",
         "alias":"Kacchan",
         "quirk":"Explosion",
         "status": "alive",
@@ -43,6 +43,85 @@
         "quirk":"Harden",
         "status": "alive",
         "occupation": "student"
+    },{
+        "id": "6",
+        "name": "Uraraka Ochako",
+        "image": "https://cdn.myanimelist.net/r/360x360/images/characters/9/299421.jpg?s=db413014c4dff893308e300b9ca6f6a7",
+        "alias": "Uravity",
+        "quirk": "Zero Gravity",
+        "status": "alive",
+        "occupation": "student"
+    },
+    {
+        "id":"7",
+        "name": "Aizawa Shōta",
+        "image": "https://cdn.shopify.com/s/files/1/1888/7379/files/45SUuxh3_400x400_36722686-9da4-4cf0-8668-648a2a270ab8.jpg?v=1571937384",
+        "alias": "Eraser Head",
+        "quirk": "Erasure",
+        "status": "alive",
+        "occupation": "teacher/hero"
+    },
+    {
+        "id":"8",
+        "name": "Akaguro Chizome",
+        "image": "https://i.ibb.co/WVBs3MY/D054-C532-E01-F-418-B-944-F-D310-D277-FE34-1-201-a.jpg",
+        "alias": "Stain",
+        "quirk": "Bloodcurdle",
+        "status": "Deceased",
+        "occupation": "Alive/imprisoned"
+    }
+    ,
+    {
+        "id":"9",
+        "name": "Yuga Aoyama",
+        "image": "https://i.pinimg.com/originals/5a/c2/82/5ac28248166e9ccb9fcd42a4bfd2a895.jpg",
+        "alias": "Shining Hero: Can't Stop Twinkling",
+        "quirk": "Navel Laser",
+        "status": "Alive",
+        "occupation": "student"
+    },
+    {
+        "id":"9",
+        "name": "Tenya Iida",
+        "image": "https://vignette.wikia.nocookie.net/bokunoheroacademia/images/7/7d/Tenya_Iida_Portrait.png/revision/latest/scale-to-width-down/340?cb=20160619044125",
+        "alias": "Ingenium",
+        "quirk": "Engine",
+        "status": "Alive",
+        "occupation": "student"
+    },
+    {
+        "id":"10",
+        "_id": "5f5bd9012317a31d4960a72e",
+        "name": "Shigaraki",
+        "image": "https://vignette.wikia.nocookie.net/bokunoheroacademia/images/f/fc/All_For_One_Portrait.png/revision/latest?cb=20180503182033",
+        "alias": "All for One",
+        "quirk": "All for One",
+        "status": "Alive/Imprisoned",
+        "occupation": "Villain"
+    },
+    {
+        "id":"11",
+        "name": "Tenko Shimura",
+        "image": "https://static.wikia.nocookie.net/c03d614a-6ee8-448d-9815-216a7635cbb4",
+        "alias": "Shigaraki",
+        "quirk": "Decay",
+        "status": "Alive",
+        "occupation": "Villain"
+    },
+    {
+        "id":"12",
+        "name": "Momo Yaoyorozu",
+        "image": "https://64.media.tumblr.com/938bf2fabaae5b41b274237ff05ec8d3/tumblr_pgtnuhtAoK1ucl2tx_1280.jpg",
+        "alias": "Everything Hero: Creati",
+        "quirk": "Creation",
+        "status": "Alive",
+        "occupation": "Student",
+        "age": 16,
+        "height": "173cm",
+        "birthday": "September 23",
+        "__v": 0
+    },{
+        "id":"13"
     }
 
 ]
