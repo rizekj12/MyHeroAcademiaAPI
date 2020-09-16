@@ -10,8 +10,7 @@ function Search(props) {
         let results = props.data.filter(char => {
             return char.alias.toLowerCase().includes(props.inputValue.toLowerCase()) || char.name.toLowerCase().includes(props.inputValue.toLowerCase())
         })
-        props.filterFunct(results)
-        
+        props.filterFunct(results)    
     }
 
     return (
@@ -25,8 +24,10 @@ function Search(props) {
                     onChange={props.handleChange}
                 />
                 <Button type="submit" className="searchButton" variant="danger">Plus Ultra!</Button>
+                
             </Form>
-            {props.foundChar === false ? <h1>Character not found</h1> : <h1></h1>}
+            {props.foundchar === false ? <h3>Character not found :(</h3> : <h1></h1>}
+           
 
         </div>
     )
