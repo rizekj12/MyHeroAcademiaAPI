@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import Header from "./Header";
 import { getCharacters } from "../services/charCrud";
 import CharacterCard from "./CharacterCard";
-import { Route } from "react-router-dom";
+import { Route, withRouter} from "react-router-dom";
 import CharacterDetail from "./CharacterDetail";
 import Mheader from "./Mheader";
 import Search from "./Search";
-import { Button } from "react-bootstrap";
 import Pagination from "./Pagination"
 import Footer from "./Footer"
+import ResultsPage from './ResultsPage'
 
 import "../css/Main.css";
 
@@ -17,7 +17,7 @@ class Main extends Component {
     characters: [],
     inputValue: "",
     filteredChars: [],
-    foundChar: true,
+    foundChar: false,
     currentPage: 1,
     pageCount: 0,
     postPerPage: 8
@@ -29,7 +29,7 @@ class Main extends Component {
       characters: response,
       filteredChars: response,
     });
-    this.createPages(response);
+
   }
 
   handleChange = (e) => {
@@ -44,7 +44,8 @@ class Main extends Component {
       this.setState({
         filteredChars: results,
       });
-    } else {
+    } 
+    else {
       this.setState({
         foundChar: false,
       });
@@ -53,25 +54,36 @@ class Main extends Component {
     }
   };
 
-  createPages = (arr) => {
-    let count = Math.ceil(arr.length / 12);
-    this.setState({
-      pageCount: count,
-    });
-  };
 
+ getResult = (e) => {
+    e.preventDefault()
+    let results = this.state.characters.filter(char => {
+        return char.alias.toLowerCase().includes(this.state.inputValue.toLowerCase()) || char.name.toLowerCase().includes(this.state.inputValue.toLowerCase())
+    })
+    
+   this.filterFunct(results)
+   if(results.length > 0){
+   this.setState({
+       foundChar: true
+   })
+this.props.history.push(`/Character/${results[0]._id}`) 
+   }else {
+    this.props.history.push("/Results")     
+   }
+     
+}
   paginate = (pageNumber) => {
       this.setState({
         currentPage: pageNumber
       })
-  }
-
+  }  
  
   render() {
       const indexOfLastChar = this.state.currentPage * this.state.postPerPage
       const indexOfFirstChar = indexOfLastChar - this.state.postPerPage
       const currentChars = this.state.characters.slice(indexOfFirstChar,indexOfLastChar)
-      console.log(currentChars)
+
+
     return (
       <div>
         <Route path="/" exact>
@@ -79,12 +91,12 @@ class Main extends Component {
           <Search
             foundchar={this.state.foundChar}
             filtered={this.state.filteredChars}
-            data={this.state.characters}
-            inputValue={this.state.inputValue}
             handleChange={this.handleChange}
-            filterFunct={this.filterFunct}
+            getResult={this.getResult}
           />
+          <hr/>
           <div className="characterDiv">
+            
             {currentChars.map((character) => (
               <CharacterCard
                 name={character.name}
@@ -95,7 +107,8 @@ class Main extends Component {
               />
             ))}
           </div>
-               
+          <hr/>
+              
           
           <Pagination className="pages" charsPerPage={this.state.postPerPage} totalChars={this.state.characters.length} paginate={this.paginate}/>
           <Footer/>
@@ -104,9 +117,13 @@ class Main extends Component {
         <Route path="/Character/:id" exact>
           <CharacterDetail charInfo={this.state.characters} />
         </Route>
+
+        <Route path="/Results">
+            <ResultsPage foundChar={this.state.foundChar} filteredData={this.state.filteredChars}/>
+        </Route>
       </div>
     );
   }
 }
 
-export default Main;
+export default withRouter(Main);

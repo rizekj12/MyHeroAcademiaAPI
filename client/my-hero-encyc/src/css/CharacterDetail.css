@@ -1,3 +1,50 @@
 .char-det-img{
     height: 300px;
 }
+
+.detailDiv{
+    margin: 50px;
+    background-color:rgb(210, 0, 0);
+    width:500px;
+    font-family: 'Anton', sans-serif;
+    /* border-radius: 5%; */
+    padding: 25px;
+
+}
+
+.char-real-name{
+    color: white;
+    margin: 10px;
+}
+
+.mainDiv{
+    /* background-image: url("https://img.pngio.com/image-wiki-background-boku-no-hero-academia-fanon-wiki-my-hero-academia-background-1920_1080.jpg");
+     background-repeat: no-repeat;
+   background-size: cover; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.char-header{
+    color: white;
+}
+
+.span{
+    color:navy;
+    font-size:15px;
+   
+}
+
+p{
+    color: white;
+    font-size:20px;
+    
+}
+
+.stats-div{
+    text-align:center;
+}

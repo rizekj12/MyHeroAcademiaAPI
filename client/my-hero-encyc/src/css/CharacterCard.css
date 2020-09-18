@@ -1,9 +1,21 @@
 .characterImg{
     height: 250px;
-    border-radius: 10%;
+    border-radius: 5%;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
     
 }
 
 .charCardDiv{
+    background-color:rgb(244, 239, 239);
     margin: 30px;
+    border: 1px black solid;
+    border-radius: 5%;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+}
+
+.charCardDiv:hover{
+    top: -15px;
 }

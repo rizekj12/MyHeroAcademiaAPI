@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../css/CharacterDetail.css'
 import Mheader from './Mheader'
 import { withRouter } from 'react-router-dom'
+import Footer from "./Footer"
 
 class CharacterDetail extends Component {
     render() { 
@@ -11,21 +12,26 @@ class CharacterDetail extends Component {
         })
         console.log(selectedChar)
         return (  
-            <div>
-                <Mheader/>
-                <h1>Character Detail</h1>
-                {selectedChar && <div>
-                    <h2>{selectedChar.alias}</h2>
+            <div className="mainDiv">
+                <Mheader head="Character Detail"/>
+                {selectedChar && <div className="detailDiv">
+                    <h2 className="char-header">{selectedChar.alias}</h2>
+                    <hr/>
+
                     <img className="char-det-img" src={selectedChar.image} alt={`image of ${selectedChar.name}`}/>
-                    <h4>{selectedChar.name}</h4>
-                    <p>Quirk: {selectedChar.quirk}</p>
-                    <p>Occupation: {selectedChar.occupation}</p>
-                    <p>Status: {selectedChar.status}</p>
-                    <p>Age: {selectedChar.age}</p>
-                    <p>Height: {selectedChar.height}</p>
-                    <p>Birthday: {selectedChar.birthday}</p>
+                    <h4 className="char-real-name">{selectedChar.name}</h4>
+                    <div className="stats-div">
+                        <hr/>
+                    <span className="span">Quirk:</span><p>{selectedChar.quirk}</p>
+                    <span className="span">Occupation:</span><p>{selectedChar.occupation}</p>
+                    <span className="span">Status:</span><p>{selectedChar.status}</p>
+                    <span className="span">Age:</span><p>{selectedChar.age}</p>
+                    <span className="span">Height:</span><p>{selectedChar.height}</p>
+                    <span className="span">Birthday:</span><p>{selectedChar.birthday}</p>
+                    </div>
 
                 </div>}
+            <Footer/>
             </div>
         );
     }

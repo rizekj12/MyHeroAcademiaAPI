@@ -1,14 +1,24 @@
 .Mhead-div{
-    background-color: yellow;
-    height: 150px;
+    background-color: navy;
+    height: 180px;
     width: 1500px;
+    display:flex;
+    flex-direction: row ;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-logo{
     height: 140px;
-    margin-left: -1000px;
+    margin-left: -1000px; 
 }
 
 .header-div{
-    background-color: yellow;
+    background-color: navy;
+}
+
+.header-text{
+    font-family: 'Anton', sans-serif;
+    margin-top: -40px;
+    color: white;
 }

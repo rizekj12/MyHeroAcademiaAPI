@@ -8,15 +8,18 @@ class Mheader extends Component {
         return (
 
             <div className="Mhead-div">
-                <Link to="/">
+                
                     <div className="header-div">
+                    <Link to="/">
                         <img 
                         src="https://i.pinimg.com/originals/4c/67/51/4c67516ab6bf8f6ebda56b8bfb064d41.png" 
                         alt="my hero logo"
                         className="hero-logo"
                 />
+                 </Link>
+                {/* <h2 className="header-text">{this.props.head}</h2> */}
                     </div>
-                </Link>
+                
             </div>
         );
     }

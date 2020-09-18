@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Martel:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 .pageDiv{
   display: flex;
   justify-items: center;
   justify-content: center;
   text-align: center;
+  font-family: 'Antic Slab', serif;
 }
