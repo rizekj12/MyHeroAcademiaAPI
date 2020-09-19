@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom"
+import Search from "./Search"
 import '../css/Mheader.css'
 
 class Mheader extends Component {
@@ -17,8 +18,17 @@ class Mheader extends Component {
                         className="hero-logo"
                 />
                  </Link>
-                {/* <h2 className="header-text">{this.props.head}</h2> */}
+               
                     </div>
+
+                    <Search
+                    handleChange={this.props.handleChange}
+                    getResult={this.props.getResult} 
+                    formDiv="form-div-mHeader"
+                    searchButtonSty="search-button-mHeader"
+                    formMheader="form-mHeader"
+                    buttonText="button-text"
+                    />
                 
             </div>
         );

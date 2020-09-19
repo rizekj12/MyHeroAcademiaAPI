@@ -10,15 +10,17 @@ function Search(props) {
 
     return (
 
-        <div className="formDiv">
-            <Form onSubmit={(e) => { props.getResult(e) }}>
+        <div 
+        className={props.formDiv}
+        >
+            <Form className={props.formMheader} onSubmit={(e) => { props.getResult(e) }}>
                 <Form.Control
                     type="text"
                     placeholder="Search Characters!"
                     value={props.inputValue}
                     onChange={props.handleChange}
                 />
-               <Button type="submit" className="searchButton" variant="danger">PLUS ULTRA!</Button>
+               <Button type="submit" className={props.searchButtonSty} variant="danger">{<p className={props.buttonText}>PLUS ULTRA!</p>}</Button>
                 
             </Form>
             

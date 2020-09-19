@@ -13,7 +13,10 @@ class CharacterDetail extends Component {
         console.log(selectedChar)
         return (  
             <div className="mainDiv">
-                <Mheader head="Character Detail"/>
+                <Mheader 
+                handleChange={this.props.handleChange}
+                getResult={this.props.getResult}
+                head="Character Detail"/>
                 {selectedChar && <div className="detailDiv">
                     <h2 className="char-header">{selectedChar.alias}</h2>
                     <hr/>

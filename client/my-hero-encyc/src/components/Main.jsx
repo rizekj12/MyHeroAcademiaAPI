@@ -89,10 +89,10 @@ this.props.history.push(`/Character/${results[0]._id}`)
         <Route path="/" exact>
           <Header />
           <Search
-            foundchar={this.state.foundChar}
-            filtered={this.state.filteredChars}
             handleChange={this.handleChange}
             getResult={this.getResult}
+            formDiv="formDiv"
+            searchButtonSty="searchButton"
           />
           <hr/>
           <div className="characterDiv">
@@ -115,7 +115,10 @@ this.props.history.push(`/Character/${results[0]._id}`)
         </Route>
 
         <Route path="/Character/:id" exact>
-          <CharacterDetail charInfo={this.state.characters} />
+          <CharacterDetail 
+          charInfo={this.state.characters} 
+          handleChange={this.handleChange}
+          getResult={this.getResult}/>
         </Route>
 
         <Route path="/Results">
