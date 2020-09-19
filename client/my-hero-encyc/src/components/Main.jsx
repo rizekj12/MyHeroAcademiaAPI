@@ -82,8 +82,6 @@ this.props.history.push(`/Character/${results[0]._id}`)
       const indexOfLastChar = this.state.currentPage * this.state.postPerPage
       const indexOfFirstChar = indexOfLastChar - this.state.postPerPage
       const currentChars = this.state.characters.slice(indexOfFirstChar,indexOfLastChar)
-
-
     return (
       <div>
         <Route path="/" exact>
