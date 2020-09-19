@@ -26,7 +26,7 @@ server.get('/', (req, res) => {
 })
 
 const buildURL = (path) => `/api/${path}`;
-const CHARACTER_BASE_URL = buildURL('v1', 'characters')
+const CHARACTER_BASE_URL = buildURL('characters')
 
 
 server.use(CHARACTER_BASE_URL, characterRoutes)
