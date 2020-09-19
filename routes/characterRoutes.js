@@ -1,7 +1,8 @@
-import express from "express"
-import characters from "../data/characters.json"
-import _ from "lodash"
-import mongoose from 'mongoose'
+const express = require("express");
+const character = require("../data/characters.json")
+const _ = require('lodash')
+const mongoose = require('mongoose')
+
 
 const DB_USER = 'Rizekj1'
 
@@ -11,7 +12,7 @@ const DB_URL = `mongodb+srv://${DB_USER}:${USER_PASSWORD}@cluster0.zcydx.mongodb
 
 const router = express.Router()
 
-let charactersArr = characters
+
 
 mongoose.connect(DB_URL, { useUnifiedTopology: true })
 

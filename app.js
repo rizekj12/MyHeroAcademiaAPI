@@ -1,9 +1,8 @@
-import express from "express"
-import morgan from "morgan"
-import characters from "./data/characters.json"
-import _ from "lodash"
-import characterRoutes from "./routes/characterRoutes"
-import bodyParser from "body-parser"
+const express = require("express");
+const logger = require("morgan");
+const _ = require("lodash")
+const characterRoutes = require( "./routes/characterRoutes")
+const bodyParser = require("body-parser");
 
 const cors = require('cors')
 
@@ -14,7 +13,7 @@ const server = express();
 const path = require('path');
 
 server.use(cors())
-server.use(morgan('tiny'))
+server.use(logger('tiny'))
 server.use(bodyParser.json())
 server.set('views', path.join('views'))
 server.set('view engine', 'ejs')
