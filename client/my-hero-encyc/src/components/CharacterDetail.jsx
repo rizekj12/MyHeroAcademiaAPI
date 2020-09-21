@@ -10,7 +10,7 @@ class CharacterDetail extends Component {
         const selectedChar = this.props.charInfo.find(character =>{
            return  charId === character._id
         })
-        console.log(selectedChar)
+   
         return (  
             <div className="mainDiv">
                 <Mheader 
