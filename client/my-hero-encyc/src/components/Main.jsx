@@ -4,7 +4,6 @@ import { getCharacters } from "../services/charCrud";
 import CharacterCard from "./CharacterCard";
 import { Route, withRouter} from "react-router-dom";
 import CharacterDetail from "./CharacterDetail";
-import Mheader from "./Mheader";
 import Search from "./Search";
 import Pagination from "./Pagination"
 import Footer from "./Footer"
