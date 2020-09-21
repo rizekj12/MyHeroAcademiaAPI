@@ -95,7 +95,7 @@ this.props.history.push(`/Character/${results[0]._id}`)
           <hr/>
           <div className="characterDiv">
             
-            {currentChars.map((character) => (
+            {currentChars && currentChars.map((character) => (
               <CharacterCard
                 name={character.name}
                 alias={character.alias}
