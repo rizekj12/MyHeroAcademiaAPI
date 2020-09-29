@@ -21,7 +21,7 @@ class CharacterDetail extends Component {
                     <h2 className="char-header">{selectedChar.alias}</h2>
                     <hr/>
 
-                    <img className="char-det-img" src={selectedChar.image} alt={`image of ${selectedChar.name}`}/>
+                    <img className="char-det-img" src={selectedChar.image} alt={`${selectedChar.name}`}/>
                     <h4 className="char-real-name">{selectedChar.name}</h4>
                     <div className="stats-div">
                         <hr/>

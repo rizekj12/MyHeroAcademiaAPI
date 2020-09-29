@@ -15,7 +15,7 @@ class CharacterCard extends Component {
                     <div className="charCardDiv">
                         <h3>{this.props.name}</h3>
                         <Link to={`/Character/${this.props.id}`}>
-                        <img className="characterImg" src={this.props.charImg} alt="character image" />
+                        <img className="characterImg" src={this.props.charImg} alt={this.props.name} />
                         </Link>
                 </div> 
                 

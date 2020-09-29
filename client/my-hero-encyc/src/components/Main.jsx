@@ -56,19 +56,29 @@ class Main extends Component {
 
  getResult = (e) => {
     e.preventDefault()
-    let results = this.state.characters.filter(char => {
-        return char.alias.toLowerCase().includes(this.state.inputValue.toLowerCase()) || char.name.toLowerCase().includes(this.state.inputValue.toLowerCase())
-    })
     
-   this.filterFunct(results)
-   if(results.length > 0){
-   this.setState({
-       foundChar: true
-   })
-this.props.history.push(`/Character/${results[0]._id}`) 
-   }else {
-    this.props.history.push("/Results")     
-   }
+    try {
+
+        let results = this.state.characters.filter(char => {
+            return char.alias.toLowerCase().includes(this.state.inputValue.toLowerCase()) || char.name.toLowerCase().includes(this.state.inputValue.toLowerCase())
+        })
+        
+       this.filterFunct(results)
+       if(results.length > 0){
+       this.setState({
+           foundChar: true
+       })
+    this.props.history.push(`/Character/${results[0]._id}`) 
+       }else {
+        this.props.history.push("/Results")     
+       }
+        
+      } catch (error) {
+        console.error(error);
+        
+        
+      }
+    
      
 }
   paginate = (pageNumber) => {
@@ -85,12 +95,17 @@ this.props.history.push(`/Character/${results[0]._id}`)
       <div>
         <Route path="/" exact>
           <Header />
+        
           <Search
             handleChange={this.handleChange}
             getResult={this.getResult}
+            characters={this.state.characters}
             formDiv="formDiv"
             searchButtonSty="searchButton"
           />
+         
+  
+          
           <hr/>
           <div className="characterDiv">
             
