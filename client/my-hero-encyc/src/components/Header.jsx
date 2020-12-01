@@ -8,7 +8,7 @@ class Header extends Component {
         return (  
             <div>
                 <Link to="/"><img src="https://i.cdn.turner.com/adultswim/big/img/2018/05/10/MHA_1appHeader.png" alt="my hero academia logo"/></Link>
-                <h2 className="intro-text">Welcome to the My Hero Academia Encyclepedia!</h2>
+                <h2 className="intro-text">Welcome to the My Hero Academia Encyclopedia!</h2>
             </div>
         );
     }
